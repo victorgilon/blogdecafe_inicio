@@ -68,8 +68,14 @@ img{
     text-align: center;
 }
 
-.header{
+.webp, .header{
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp, .header{
     background-image: url(../img/banner.jpg);
+}
+.header{   
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -146,12 +152,16 @@ img{
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
 }
 
 @media (min-width: 768px) {
   .boton{
     display: inline-block;
   }
+}
+.boton:hover{
+    cursor: pointer;
 }
 .boton--primario{
     background-color: var(--negro);
@@ -226,4 +236,36 @@ img{
 .curso__label,
 .curso__info{
     font-size: 2rem;
+}
+
+/** Contacto **/
+.contacto-bg{
+    width: 100%;
+    height: 40rem;/** se le define una altura a la imagen **/
+    background-size: cover;/** la imagen no se repite **/
+    background-repeat: no-repeat;
+    position: relative;
+}   
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;/** con el -5 el formulario se pone encima de la imagen **/
+    width: 95%;
+    
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;/** espacio entre los textos y caja de texto que no queden pegados **/
+    gap: 2rem;
+}
+.campo__label{
+    flex: 0 0 9rem;/** el 9rem seria para que no quede pegado el texto y la caja de texto **/
+    text-align: right;
+}
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+.campo__field--textarea{
+    height: 200px; /** tamaño de la caja de texto de mensaje **/
 }

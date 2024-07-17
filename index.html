@@ -5,13 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogDeCafe</title>
+    <meta name="description" content="Pagina web de blog de cafe">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
+      
+    <!-- Prefetch -->
+     <link rel="Prefetch" href="nosotros.html" as="document">
+
+    <!-- Preload -->
+    <link rel="Preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="Preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="Preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+
+    
 
 </head>
 
@@ -38,7 +51,13 @@
             <h3>Nuestro Blog</h3>
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="imagen blog">
+
+                    <!-- Picture -->
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp"><!-- la imagen la convierte en webp que es menos pesada para que cargue mas rapido pero si la pagina no tiene soporte en alguna web vuelve y carga la imagen jpg que colocamos abajo -->
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
+                    
                 </div>
 
                 <div class="entrada__contenido">
@@ -50,7 +69,12 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="imagen blog">
+                     <!-- Picture -->
+                     <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp"><!-- la imagen la convierte en webp que es menos pesada para que cargue mas rapido pero si la pagina no tiene soporte en alguna web vuelve y carga la imagen jpg que colocamos abajo -->
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture>
+                   
                 </div>
 
                 <div class="entrada__contenido">
@@ -62,13 +86,18 @@
 
             <article class="entrada">
                 <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="imagen blog">
+                    <!-- Picture -->
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp"><!-- la imagen la convierte en webp que es menos pesada para que cargue mas rapido pero si la pagina no tiene soporte en alguna web vuelve y carga la imagen jpg que colocamos abajo -->
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture>
+                    
                 </div>
 
                 <div class="entrada__contenido">
                     <h4 class="no-margin">Beneficios Del Cafe</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium maxime veritatis eligendi blanditiis iste? Nostrum quaerat at, voluptas sequi, illo explicabo inventore in quidem eius illum dolore aliquam autem fugit!</p>
-                    <a href="entrada.html" class="boton boton--primario">leer entrada</a>
+                    <a href="entrada.html" class="boton boton--primario">Mas Informacion sobre nuestros cursos</a>
                 </div>
             </article>
         </main>
@@ -80,14 +109,14 @@
                     <h4 class="no-margin">Tecnicas de Extraccion de Cafe</h4>
                     <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
                     <p>Cupo:  <span class="widget-curso__info">20</span></p>
-                    <a href="entrada.html" class="boton boton--secundario">leer entrada</a>
+                    <a href="entrada.html" class="boton boton--secundario">Mas Informacion sobre nuestros cursos</a>
                 </li>
 
                 <li class="widget-curso">
                     <h4 class="no-margin">4 Recetas de Cafe para Principiantes</h4>
                     <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
                     <p>Cupo:  <span class="widget-curso__info">20</span></p>
-                    <a href="entrada.html" class="boton boton--secundario">leer entrada</a>
+                    <a href="entrada.html" class="boton boton--secundario">Mas Informacion sobre nuestros cursos</a>
                 </li>
             </ul>
         </aside>
@@ -107,5 +136,6 @@
         </div>
     </footer>
 
+    <script src="js/modernizr.js"></script>
 </body>
 </html>
